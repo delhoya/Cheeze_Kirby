@@ -1,1 +1,192 @@
 
+ㅁ 선형대수학 정리(중간시험대비) 
+
+1. 선형 연립방정식 / 동차선형연립방정식 
+2. 가역행렬 (역행렬)
+
+  [전치행렬]
+  대각행렬 / 삼각행렬 /  대칭행렬 / 직교행렬
+  
+3. [행렬식] 
+  행렬식 계산법
+  행렬식의 성질
+  
+4. [벡터공간 > 행렬공간] 
+
+  벡터공간 
+  덧셈과 스칼라 곱셈에 관련된 수학적 체계(대수 체계)를 형성하는 공간
+  부분공간
+  집합에서 부분집합이 있는 것처럼, 벡터공간에서도 그 기본구조를 그대로 유지하는 작은 벡터공간 즉 부분공간이 있음
+  Rank vs Nullity 
+
+5. 선형변환
+  
+  벡터공간에서 2가지 연산 성질(동차성,가산성)을 보존하며 변환시키는 함수/사상/변환
+  전사 단사 전단사
+  
+6. 고유값 
+  
+  https://ko.khanacademy.org/math/linear-algebra
+  https://twlab.tistory.com/3?category=668741
+
+=============================================
+
+ㅁ 선형대수학
+
+  6주차, 5.1절 선형변환  R^n -> R^m 
+  6주차, 5.2절 핵(kernel)과 치역(range)
+
+  7주차, 6.1절 고윳값과 고유벡터
+  7주차, 6.2절 닮은 행렬과 행렬의 대각화
+  7주차, 6.3절 직교대각화
+
+  8주차 중간시험
+
+  9주차, 7.1절 특이값분해(SVD)
+  9주차, 7.2절 일반화된 역행렬
+  9주차, 8.1절 이차형식 part 1
+  
+  10주차, 8.1절 이차형식 part 2
+  10주차, 이차형식과 다변수함수의 극대, 극소 판단
+
+ 
+=============================================
+
+ㅁ 확률과 통계
+
+1.이산확률분포
+  베르누이 / 이항분포 / 다항분포 
+  기하분포(처음성공) / 음이항분포(k번째 성공)
+  포아송분포 : 
+    단위시간/면적/길이/공간 동안 발생횟수  
+    이항분포의 극한 = 포아송분포 
+  
+2.연속확률분포 
+  균일분포 
+  정규분포 : 중심극한의 법칙 / 대수의 법칙 
+
+
+6장  이변량확률변수1_20211
+
+8장  점추정1
+
+
+  http://blog.naver.com/mykepzzang/220838870172
+  https://nate9389.tistory.com/1626?category=1044821
+
+
+==================================================
+
+ㅁ 자료구조 / 알고리즘
+
+1. 스택응용  
+  배열 / 링크드 리스트 
+  괄호
+  연산자 후위표기법
+  미로찾기 - 깊이우선 
+  
+2. 큐 응용 
+  배열 / 링크드 리스트
+  원형 큐 (나머지 연산 - 모듈러 연산) 
+  
+  
+ㅁ 자료구조 / 알고리즘
+
+[선형자료구조] 
+스택 / 괄호검사 깊이우선탐색 
+큐 / 너비우선탐색 
+원형큐 
+덱
+이중연결리스트 덱 
+
+
+8주차 온라인 수업-1차시(우선순위큐&트리)
+8주차 온라인 수업-2차시(트리_트리순회)
+8주차 온라인 수업-3차시(힙 트리)
+
+  
+9주차 온라인 수업-1차시(수업공지&최대힙트리)
+
+10주차 온라인 수업-1차시(탐색트리)
+10주차 온라인 수업-2차시(탐색트리)
+10주차 온라인 수업-3차시(AVL트리)
+
+
+==================================================  
+
+ㅁ 정보처리기사
+
+ㅁ기출
+  https://ss-o.tistory.com/110?category=967966
+ㅁ SQL 
+  https://thebook.io/080202/
+
+
+ㅇ SELECT 구문
+
+SELECT column1, column2, …
+FROM 테이블 명
+WHERE 조건
+ORDER BY 정렬 순서;
+
+SELECT 학번,이름 FROM 학생 WHERE 학년 IN (3,4)
+
+SELECT 학과 FROM 학생
+SELECT DISTINCT 학과 FROM 학생
+SELECT COUNT(DISTINCT 학과) FROM 학생 WHERE 학과 = '컴퓨터학과'
+
+SELECT 학번 FROM 학생 WHERE 이름 LIKE '이%' ORDER BY 학년 DESC
+
+
+ㅇ 별칭(AS)
+https://coding-factory.tistory.com/84
+
+ㅇ 집계함수 
+  (COUNT,AVG,MAX,MIN,SUM)   
+  https://coding-factory.tistory.com/85?category=772898
+  (GROUP BY)
+  https://coding-factory.tistory.com/86?category=772898
+
+SELECT 학과 , COUNT(학과) AS '학과별튜플수' FROM 학생 GROUP BY 학과 
+SELECT 과목이름, MIN(점수) AS '최소점수' , MAX(점수) AS '최대점수' FROM 성적 GROUP BY 과목 HAVING AVG(점수) >= 90
+
+
+==================================================
+
+
+ㅁ데이콘
+  데이터 EDA 
+  주택가격
+  http://www.r-one.co.kr/rone/resis/statistics/statisticsViewer.do?menuId=HOUSE_21111
+
+
+ㅁ패스트캠퍼스 
+
+
+ㅁ핀테크 포털 
+  https://fintech.or.kr/web/user/main.do
+  https://credb.kcredit.or.kr:3446/frt/main.do
+
+
+ㅁ딥러닝 / 수학_미분방정식_선형대수학
+
+  https://arxiv.org/pdf/1712.04741.pdf
+
+
+==================
+
+ㅁ 맥북 kpi 설정
+
+macbook pro beamforming speaker pdf
+kpi 예시 - 잔향시간 rt60 200ms 이하 기준 충족? 
+notebook audio test - Crysound 
+
+
+ㅁ 녹음기 프로그램 (Audacity) 
+https://prayingyomi.tistory.com/60
+
+ㅁ DSP - Ti 
+  https://www.ti.com/ko-kr/microcontrollers-mcus-processors/processors/digital-signal-processors/applications.html
+  
+  
+==================================================
