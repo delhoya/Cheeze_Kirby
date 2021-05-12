@@ -42,6 +42,31 @@ https://lucaseo.github.io/posts/2021-01-22-hands-on-preprocess-audio-data/
 
 https://m.blog.naver.com/PostView.nhn?blogId=cassiopeia84&logNo=40202107686&proxyReferer=https:%2F%2Fwww.google.com%2F
 
+
+import pandas as pd
+import numpy as np
+from scipy.io import wavfile
+import librosa.display
+import matplotlib.pyplot as plt
+
+# 음성 파일 로딩
+file = 'C:/Users/user/Documents/Audacity/210512 test(mic1).wav'
+# Signal , Sampling rate 설정
+signal, sample_rate = librosa.load(file, sr=44100)
+
+# signal벡터 갯수 분석
+print("Signal Amplitude data:",signal)
+print("Sample size:",signal.shape)
+
+# Waveform 형태 분석
+fig = plt.figure(figsize =(14,5))
+librosa.display.waveplot(signal,sr=sample_rate)
+plt.ylabel("Amplitude")
+plt.xlabel("time(s)")
+plt.show()
+
+
+
 회로설계
 블록다이어그램 -> 회로도(스캐매틱) -> 아트웍 -> BOM -> 발주  
 https://kernel.bz/blogPost/bombee_sch
