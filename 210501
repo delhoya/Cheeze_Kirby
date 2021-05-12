@@ -30,8 +30,6 @@ http://matrix.skku.ac.kr/knou-knowls/
 
 ===================================================
 
-대출규제
-  대출규제 발표 
 
 음향테스트
 https://www.audiocheck.net/
@@ -42,6 +40,8 @@ https://lucaseo.github.io/posts/2021-01-22-hands-on-preprocess-audio-data/
 
 https://m.blog.naver.com/PostView.nhn?blogId=cassiopeia84&logNo=40202107686&proxyReferer=https:%2F%2Fwww.google.com%2F
 
+
+===================================================
 
 import pandas as pd
 import numpy as np
@@ -66,10 +66,17 @@ plt.xlabel("time(s)")
 plt.show()
 
 
+===================================================
+
 
 회로설계
 블록다이어그램 -> 회로도(스캐매틱) -> 아트웍 -> BOM -> 발주  
 https://kernel.bz/blogPost/bombee_sch
+
+
+
+대출규제
+  대출규제 발표 
 
 세계의 요리
 https://namu.wiki/w/%ED%8B%80:%EC%84%B8%EA%B3%84%EC%9D%98%20%EC%9A%94%EB%A6%AC
