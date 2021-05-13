@@ -46,11 +46,13 @@ https://seungheondoh.netlify.app/blog/fft
 
 ===================================================
 
+
 import pandas as pd
 import numpy as np
 from scipy.io import wavfile
 import librosa.display
 import matplotlib.pyplot as plt
+import math
 
 # 음성 파일 로딩
 file = 'C:/Users/user/Documents/Audacity/210512 test(mic1).wav'
@@ -72,6 +74,15 @@ plt.show()
 mic_signal_table = pd.DataFrame(data=signal)
 print(mic_signal_table.shape)
 mic_signal_table.to_csv('C:/Users/user/Documents/Audacity/saved_mic_wav_16Khz.csv')
+
+"""
+#출력한 Wavform data DB 획득 및 저장 ( dB = 20 * log10(amplitude / (1/sampling rate*2 ) ) (dB = 20 * log10(A/A0)) (ex 8 bit = -128 to 127)
+signal_to_db = 20 * np.log10(signal)
+mic_signal_to_db_table = pd.DataFrame(data=signal_to_db)
+print(mic_signal_table.shape)
+mic_signal_table.to_csv('C:/Users/user/Documents/Audacity/saved_mic_wav_16Khz_dB.csv')
+
+"""
 
 """
 # FFT 실행
@@ -110,9 +121,7 @@ plt.ylabel("Frequency")
 plt.colorbar(format = "%+2.0f dB")
 plt.title("Spectrogram *dB")
 plt.show()
-
 """
-
 ===================================================
 
 
