@@ -55,7 +55,7 @@ import matplotlib.pyplot as plt
 # 음성 파일 로딩
 file = 'C:/Users/user/Documents/Audacity/210512 test(mic1).wav'
 # Signal , Sampling rate 설정
-signal, sample_rate = librosa.load(file, sr=44100)
+signal, sample_rate = librosa.load(file, sr=16000)
 
 # signal벡터 갯수 분석
 print("Signal Amplitude data:",signal)
@@ -68,6 +68,50 @@ plt.ylabel("Amplitude")
 plt.xlabel("time(s)")
 plt.show()
 
+#출력한 waveform data 획득 및 저장
+mic_signal_table = pd.DataFrame(data=signal)
+print(mic_signal_table.shape)
+mic_signal_table.to_csv('C:/Users/user/Documents/Audacity/saved_mic_wav_16Khz.csv')
+
+"""
+# FFT 실행
+# 샘플 hop 넘버 / 샘플 윈도우 수
+hop_length = 512
+n_fft = 2048
+
+# duration 계산
+hop_length_duration = float(hop_length)/sample_rate
+n_fft_duration = float(n_fft)/sample_rate
+
+# STFT 실행
+stft = librosa.stft(signal,n_fft=n_fft,hop_length = hop_length)
+print("stft shape:",stft.shape)
+
+# Spectrogram 생성
+spectrogram = np.abs(stft)
+print("spectrogram shape:",spectrogram.shape)
+
+# display spectrogram
+plt.figure(figsize=(14,5))
+librosa.display.specshow(spectrogram,sr=sample_rate,hop_length=hop_length)
+plt.xlabel("Time(s)")
+plt.ylabel("Frequency")
+plt.colorbar()
+plt.title("Spectorgram")
+plt.show()
+
+# calcurate Amplitude to Decibel (Using Spectrogram)
+log_spectrogram = librosa.amplitude_to_db(spectrogram)
+print("log spectrogram shpae",log_spectrogram.shape)
+plt.figure(figsize=(14,5))
+librosa.display.specshow(log_spectrogram,sr=sample_rate,hop_length=hop_length)
+plt.xlabel("time(s)")
+plt.ylabel("Frequency")
+plt.colorbar(format = "%+2.0f dB")
+plt.title("Spectrogram *dB")
+plt.show()
+
+"""
 
 ===================================================
 
