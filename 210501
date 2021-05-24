@@ -234,7 +234,9 @@ plt.plot(x, intercept + slope * x , 'r' , label = 'linear regression')
 linregress = intercept + slope * x
 plt.plot(t,data_in_db,linewidth =1,alpha=0.7,color='#004bc6')
 plt.show()
-"""===================================================
+"""
+
+===================================================
 
 
 import pandas as pd
@@ -312,6 +314,7 @@ plt.colorbar(format = "%+2.0f dB")
 plt.title("Spectrogram *dB")
 plt.show()
 """
+
 ===================================================
 
 
@@ -323,9 +326,9 @@ https://namu.wiki/w/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EA%B4%80%EB%A0%A8%20%EC%A0%95
 블록다이어그램 -> 회로도(스캐매틱) -> 아트웍 -> BOM -> 발주  
 https://kernel.bz/blogPost/bombee_sch
 
-
 대출규제
-  대출규제 발표 
+대출규제 발표 
+
 
 세계의 요리
 https://namu.wiki/w/%ED%8B%80:%EC%84%B8%EA%B3%84%EC%9D%98%20%EC%9A%94%EB%A6%AC
