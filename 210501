@@ -364,3 +364,43 @@ https://konsoler.com/g2/bbs/board.php?bo_table=game_5_1&wr_id=31
 https://namu.wiki/w/%EB%8B%A4%EC%9C%97
 
 
+=====================================
+
+
+# https://wikidocs.net/14646
+
+import matplotlib.pyplot as plt
+import numpy as np
+# 3차원 그래프 from mpl_toolkits.mplot3d import Axes3D를 추가해줍니다.
+from mpl_toolkits.mplot3d import Axes3D
+
+# x,y,z 생성
+x = [0 ,10]
+y = [0, 10]
+z = [0, 10]
+
+# figure 크기 설정
+# fig = plt.figure()만 사용해도 됨.
+fig = plt.figure(figsize=(10, 10))
+
+# 3D axes를 만들기 위해 projection=’3d’ 키워드를 입력해줍니다.
+# GCA = get current axes 
+ax = fig.gca(projection='3d')
+
+# scatter() 함수에 준비된 x, y, z 배열 값을 입력해주고
+# 마커, 스타일 및 마커 색상 등을 설정할 수 있습니다.
+# marker = 점의 형태
+# s = 점의 크기
+# c = 점의 색깔
+ax.scatter(x, y, z, marker='o', s=0.1, c='darkgreen')
+ax.scatter(3,4,5, marker='o',s=20, c='darkgreen')
+ax.scatter(7,4,5, marker='o',s=20, c='darkgreen')
+
+
+
+plt.show()
+
+# x2 + y2 + z2 = root c 인 x,y,z 그래프 그리기
+# 정육면체 이므로 = 함수 6개 가능 (어려움 포기) (...)
+
+
