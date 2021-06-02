@@ -140,16 +140,6 @@ vif(model_both)
 
 plot(model_both)
 
-qqPlot(model_both,labels=row.names(states),id.method="identify",simulate=TRUE,main="Q-Q_ plot")
-
-crPlots(model_both)
-ncvTest(model_both)
-spreadLevelPlot(model_both)
-
-install.packages('gvlma')
-library(gvlma)
-gvmodel<-gvlma(model_forward)
-summary(gvmodel)
 
 ================================================================================================================================
 
