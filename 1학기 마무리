@@ -143,6 +143,14 @@ https://www.kaggle.com/ar2017/basics-of-feature-selection-with-python
 https://www.kaggle.com/rtatman/the-5-day-data-challenge#Day-5:-Using-a-Chi-Square-Test
 
 
+1. 이상치 제거
+2. 정규성 검증 (종속변수 / 독립변수)
+3. 상관성 분석
+3-1 다중공산성 ?
+3-2 치명인자 선정
+4. 회귀 
+
+
 ================================================================================================================================
 
 PBL 보고서 - 소감문 작성
