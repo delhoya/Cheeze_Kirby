@@ -154,15 +154,19 @@ https://github.com/GeeDong/graduate_admission/blob/master/Admission_Predict.ipyn
 
 3-1 다중공산성 ?
 
+파이선
 https://bkshin.tistory.com/entry/DATA-20-%EB%8B%A4%EC%A4%91%EA%B3%B5%EC%84%A0%EC%84%B1%EA%B3%BC-VIF
 https://todayisbetterthanyesterday.tistory.com/8
 
 3-2  Feature Selection (feature importance 계산)
+파이선
 https://wikidocs.net/16599
 
-4. 회귀 분석 결과 
-f 검정으로 feature selection 한 결과 비교 
+4. 회귀 분석 결과  (f 검정으로 feature selection 결과 비교)
+R
 https://bioinformaticsandme.tistory.com/290
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=leedk1110&logNo=220774824473
+https://rstudio-pubs-static.s3.amazonaws.com/190997_40fa09db8e344b19b14a687ea5de914b.html
 
 ================================================================================================================================
 
