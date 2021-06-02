@@ -163,8 +163,9 @@ if __name__ == '__main__':
                 min = d[j]
                 m = j
         visited[m] = True
-
-        for w, wt in list(g[m]):
+        
+        # 파이선 range와 list 차이 주의! (range 도 list 객체임)  
+        for w, wt in list(g[m]): 
             if not visited[w] :
                 if wt < d[w]:
                     d[w]=wt
