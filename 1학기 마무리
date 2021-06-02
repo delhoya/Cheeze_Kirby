@@ -143,13 +143,26 @@ https://www.kaggle.com/ar2017/basics-of-feature-selection-with-python
 https://www.kaggle.com/rtatman/the-5-day-data-challenge#Day-5:-Using-a-Chi-Square-Test
 
 
+================================================================================================================================
+
+<스토리라인> 
+
 1. 이상치 제거
 2. 정규성 검증 (종속변수 / 독립변수)
 3. 상관성 분석
-3-1 다중공산성 ?
-3-2  Feature Selection
-4. 회귀 분석 결과 
+https://github.com/GeeDong/graduate_admission/blob/master/Admission_Predict.ipynb
 
+3-1 다중공산성 ?
+
+https://bkshin.tistory.com/entry/DATA-20-%EB%8B%A4%EC%A4%91%EA%B3%B5%EC%84%A0%EC%84%B1%EA%B3%BC-VIF
+https://todayisbetterthanyesterday.tistory.com/8
+
+3-2  Feature Selection (feature importance 계산)
+https://wikidocs.net/16599
+
+4. 회귀 분석 결과 
+f 검정으로 feature selection 한 결과 비교 
+https://bioinformaticsandme.tistory.com/290
 
 ================================================================================================================================
 
