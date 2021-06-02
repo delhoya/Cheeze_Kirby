@@ -1,3 +1,184 @@
+
+
+================================================================================================================================
+
+- 분석(연구)의 목적
+- 분석 대상 데이터와 사전 처리
+- 통계적 분석 방법
+- 분석의 결과와 해석
+- 결과의 활용 방안과 한계
+
+
+이원분산분석 교호작용 df
+1 sample t
+공정능력지수
+분산분석 
+
+이원분산분석 교호작용 df
+http://wolfpack.hnu.ac.kr/
+https://wikidocs.net/book/3558
+http://physics2.mju.ac.kr/juhapruwp/?p=1755
+
+
+ADP 실습 문제 참조 
+https://www.kaggle.com/ash316/eda-to-prediction-dietanic
+https://ckmoong.tistory.com/27
+https://velog.io/@suzin
+
+정규성 잘나오는 데이터 찾기
+https://github.com/GeeDong/graduate_admission/blob/master/Admission_Predict.ipynb
+https://www.kaggle.com/ar2017/basics-of-feature-selection-with-python
+https://www.kaggle.com/rtatman/the-5-day-data-challenge#Day-5:-Using-a-Chi-Square-Test
+
+
+================================================================================================================================
+
+<스토리라인> 
+
+1. 이상치 제거
+2. 정규성 검증 (종속변수 / 독립변수)
+3. 상관성 분석
+https://github.com/GeeDong/graduate_admission/blob/master/Admission_Predict.ipynb
+
+3-1 다중공산성 ?
+https://heung-bae-lee.github.io/2020/01/08/machine_learning_02/
+
+파이선
+https://bkshin.tistory.com/entry/DATA-20-%EB%8B%A4%EC%A4%91%EA%B3%B5%EC%84%A0%EC%84%B1%EA%B3%BC-VIF
+https://todayisbetterthanyesterday.tistory.com/8
+
+3-2  Feature Selection (feature importance 계산)
+파이선
+https://wikidocs.net/16599
+
+회귀모형 적절성 검증
+https://rstudio-pubs-static.s3.amazonaws.com/190997_40fa09db8e344b19b14a687ea5de914b.html
+
+
+4. 회귀 분석 결과  (f 검정으로 feature selection 결과 비교)
+R
+https://bioinformaticsandme.tistory.com/290
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=leedk1110&logNo=220774824473
+
+
+
+
+
+#Import Data
+dataset = read.csv('C:/Users/user/GRA/DATA.csv',header = TRUE)
+df = dataset # Original Copy
+#Exploring the Dataset
+str(df)
+summary(df)
+names(df)
+
+
+library(MASS)
+model_1=lm(Chance.of.Admit ~ GRE.Score+TOEFL.Score+University.Rating+SOP+LOR+CGPA+Research, data=dataset)
+summary(model_1)
+
+model_2 = lm(Chance.of.Admit~ GRE.Score+TOEFL.Score+University.Rating+LOR+CGPA+Research, data=dataset)
+summary(model_2)
+
+model_3 = lm(Chance.of.Admit~ GRE.Score+TOEFL.Score+LOR+CGPA+Research, data=dataset)
+summary(model_3)
+
+anova(model_1, model_2,model_3)
+
+summary(model_2)
+summary(model_1)
+
+install.packages('car')
+library(car)
+vif(model_1)
+vif(model_2)
+vif(model_3)
+
+plot(model_1)
+plot(model_2)
+
+
+
+
+
+================================================================================================================================
+
+PBL 보고서 - 소감문 작성
+기말 퀴즈 대비 
+
+
+
+================================================================================================================================
+
+# 트리
+https://kingpodo.tistory.com/category/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0?page=1
+
+#정렬
+https://gmlwjd9405.github.io/tags#algorithm
+
+#제자리 힙정렬 (오름차순)
+https://ehclub.co.kr/1552
+
+# AVL 트리 
+https://www.cs.usfca.edu/~galles/visualization/AVLtree.html
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=dhdh6190&logNo=221062784111
+
+# 해시테이블
+https://hsp1116.tistory.com/35
+
+
+알고리즘 대체과제 
+
+문제 1] 다음 트리를 전위순회, 중위순회, 후위순회한 결과를 구하시오. (15점)
+
+문제 2] 다음 가중치 그래프를 보고 질문에 답하시오. (20점)
+(1) 프림 알고리즘을 이용해 그래프 1의 최소 신장 트리를 구성하시오. (A 정점으로 시작)
+(2) 크루스칼 알고리즘을 이용해 그래프 2의 최소 신장 트리를 구성하시오.
+
+문제 3] 다음의 해시함수와 입력 키에 대해 다음 물음에 답하시오. (20점)
+(1) 선형조사법으로 해시테이블에 저장하시오.
+(2) 이차조사법으로 해시테이블에 저장하시오.
+(3) 이중 해시법으로 해시테이블에 저장하시오. 
+(3) 체이닝법으로 해시테이블에 저장하시오.
+
+문제 4] 주어진 가중치 그래프에서 Prim 최소신장트리 알고리즘을 이용하여 최대신장트리(maximum
+ spanning tree)를 구하는 프로그램을 작성하라. (10점)
+(14주차 수업 자료중 “[프로그램8-6] prim.py” 참고)
+
+문제 5] 다음 병합 정렬 프로그램을 순환이 아닌 반복을 이용하여 작성하라. (10점)
+
+문제 6] 다음 그래프에서 정점 S부터 각 정점까지의 최단 거리를 계산해보자. Dijkstra 알고리즘을 사용
+ 한다. 알고리즘의 각 단계를 그려보자. (10점)
+ 
+문제 7] 다음 그래프의 서로 다른 모든 신장트리를 그리시오. (10점)
+
+문제 8] Empty인 AVL 트리에 차례로 key 값 75, 80, 85, 20, 10, 50, 30, 40, 70, 90을 삽입하면서
+ 최종 AVL 트리가 생성되는 과정을 그리시오. (15점)
+
+
+문제 9] 다음의 AVL 트리에서 key 값 75를 삭제한 다음, 85를 삭제한 후의 AVL 트리를 그리시오.
+ (10점)
+ 
+ 문제 10] 다음의 그래프에 대하여 답하라. 그래프는 인접 행렬로 표현되어 있다고 가정하라.(10점)
+(1) 정점 3에서 출발하여 깊이 우선 탐색을 한 경우의 방문 순서
+(2) 정점 3에서 출발하여 너비 우선 탐색을 한 경우의 방문 순서
+
+문제11] 다음의 정렬기법을 이용하여 다음의 정수 배열을 오름차순으로 정렬하라. 각 단계에서의 배열의
+ 내용을 나타내어라. (20점)
+
+(1) 퀵 정렬 : 배열의 첫 번째 요소를 피벗으로 선택한다.
+(2) 힙 정렬 : 추가적인 배열을 사용하지 않는 제자리 정렬로 구현한다. 최대 힙이 만들어지는
+ 과정을 트리를 이용해 나타내라. 또한 최대 힙에서의 배열의 내용을 적어라.
+(3) 병합 정렬
+ (4) 쉘 정렬 : 각 단계에서의 간격(gap)과 배열의 내용을 적어라. 단, 간격은 배열 크기의 절반
+ 으로 시작한다. 또한 간격이 짝수이면 1을 더해 홀수로 만들어 사용하라.
+ 
+ 
+
+
+================================================================================================================================
+
+
 연구과제명	
 국문	그래핀 기반 고분자 나노복합재료 분산 제조 및 응용
 영문	A Application of Graphene-based Polymer Nanocomposites
@@ -111,140 +292,3 @@ and transparent 소자 특성
 화로 연결되며 상업화의 관점에서 판단하였을 때 공정비용 감소와 재료비용 감소로 인한
 경제적인 이익으로 직결될 수 있음
 
-
-================================================================================================================================
-
-- 분석(연구)의 목적
-- 분석 대상 데이터와 사전 처리
-- 통계적 분석 방법
-- 분석의 결과와 해석
-- 결과의 활용 방안과 한계
-
-
-이원분산분석 교호작용 df
-1 sample t
-공정능력지수
-분산분석 
-
-이원분산분석 교호작용 df
-http://wolfpack.hnu.ac.kr/
-https://wikidocs.net/book/3558
-http://physics2.mju.ac.kr/juhapruwp/?p=1755
-
-
-ADP 실습 문제 참조 
-https://www.kaggle.com/ash316/eda-to-prediction-dietanic
-https://ckmoong.tistory.com/27
-https://velog.io/@suzin
-
-정규성 잘나오는 데이터 찾기
-https://github.com/GeeDong/graduate_admission/blob/master/Admission_Predict.ipynb
-https://www.kaggle.com/ar2017/basics-of-feature-selection-with-python
-https://www.kaggle.com/rtatman/the-5-day-data-challenge#Day-5:-Using-a-Chi-Square-Test
-
-
-================================================================================================================================
-
-<스토리라인> 
-
-1. 이상치 제거
-2. 정규성 검증 (종속변수 / 독립변수)
-3. 상관성 분석
-https://github.com/GeeDong/graduate_admission/blob/master/Admission_Predict.ipynb
-
-3-1 다중공산성 ?
-https://heung-bae-lee.github.io/2020/01/08/machine_learning_02/
-
-파이선
-https://bkshin.tistory.com/entry/DATA-20-%EB%8B%A4%EC%A4%91%EA%B3%B5%EC%84%A0%EC%84%B1%EA%B3%BC-VIF
-https://todayisbetterthanyesterday.tistory.com/8
-
-3-2  Feature Selection (feature importance 계산)
-파이선
-https://wikidocs.net/16599
-
-회귀모형 적절성 검증
-https://rstudio-pubs-static.s3.amazonaws.com/190997_40fa09db8e344b19b14a687ea5de914b.html
-
-
-4. 회귀 분석 결과  (f 검정으로 feature selection 결과 비교)
-R
-https://bioinformaticsandme.tistory.com/290
-https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=leedk1110&logNo=220774824473
-
-================================================================================================================================
-
-PBL 보고서 - 소감문 작성
-기말 퀴즈 대비 
-
-
-
-================================================================================================================================
-
-# 트리
-https://kingpodo.tistory.com/category/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0?page=1
-
-#정렬
-https://gmlwjd9405.github.io/tags#algorithm
-
-#제자리 힙정렬 (오름차순)
-https://ehclub.co.kr/1552
-
-# AVL 트리 
-https://www.cs.usfca.edu/~galles/visualization/AVLtree.html
-https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=dhdh6190&logNo=221062784111
-
-# 해시테이블
-https://hsp1116.tistory.com/35
-
-
-알고리즘 대체과제 
-
-문제 1] 다음 트리를 전위순회, 중위순회, 후위순회한 결과를 구하시오. (15점)
-
-문제 2] 다음 가중치 그래프를 보고 질문에 답하시오. (20점)
-(1) 프림 알고리즘을 이용해 그래프 1의 최소 신장 트리를 구성하시오. (A 정점으로 시작)
-(2) 크루스칼 알고리즘을 이용해 그래프 2의 최소 신장 트리를 구성하시오.
-
-문제 3] 다음의 해시함수와 입력 키에 대해 다음 물음에 답하시오. (20점)
-(1) 선형조사법으로 해시테이블에 저장하시오.
-(2) 이차조사법으로 해시테이블에 저장하시오.
-(3) 이중 해시법으로 해시테이블에 저장하시오. 
-(3) 체이닝법으로 해시테이블에 저장하시오.
-
-문제 4] 주어진 가중치 그래프에서 Prim 최소신장트리 알고리즘을 이용하여 최대신장트리(maximum
- spanning tree)를 구하는 프로그램을 작성하라. (10점)
-(14주차 수업 자료중 “[프로그램8-6] prim.py” 참고)
-
-문제 5] 다음 병합 정렬 프로그램을 순환이 아닌 반복을 이용하여 작성하라. (10점)
-
-문제 6] 다음 그래프에서 정점 S부터 각 정점까지의 최단 거리를 계산해보자. Dijkstra 알고리즘을 사용
- 한다. 알고리즘의 각 단계를 그려보자. (10점)
- 
-문제 7] 다음 그래프의 서로 다른 모든 신장트리를 그리시오. (10점)
-
-문제 8] Empty인 AVL 트리에 차례로 key 값 75, 80, 85, 20, 10, 50, 30, 40, 70, 90을 삽입하면서
- 최종 AVL 트리가 생성되는 과정을 그리시오. (15점)
-
-
-문제 9] 다음의 AVL 트리에서 key 값 75를 삭제한 다음, 85를 삭제한 후의 AVL 트리를 그리시오.
- (10점)
- 
- 문제 10] 다음의 그래프에 대하여 답하라. 그래프는 인접 행렬로 표현되어 있다고 가정하라.(10점)
-(1) 정점 3에서 출발하여 깊이 우선 탐색을 한 경우의 방문 순서
-(2) 정점 3에서 출발하여 너비 우선 탐색을 한 경우의 방문 순서
-
-문제11] 다음의 정렬기법을 이용하여 다음의 정수 배열을 오름차순으로 정렬하라. 각 단계에서의 배열의
- 내용을 나타내어라. (20점)
-
-(1) 퀵 정렬 : 배열의 첫 번째 요소를 피벗으로 선택한다.
-(2) 힙 정렬 : 추가적인 배열을 사용하지 않는 제자리 정렬로 구현한다. 최대 힙이 만들어지는
- 과정을 트리를 이용해 나타내라. 또한 최대 힙에서의 배열의 내용을 적어라.
-(3) 병합 정렬
- (4) 쉘 정렬 : 각 단계에서의 간격(gap)과 배열의 내용을 적어라. 단, 간격은 배열 크기의 절반
- 으로 시작한다. 또한 간격이 짝수이면 1을 더해 홀수로 만들어 사용하라.
- 
- 
-
-
-================================================================================================================================
