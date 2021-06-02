@@ -99,7 +99,57 @@ plot(model_2)
 
 
 
+================================================================================================================================
 
+#Import Data
+dataset = read.csv('C:/Users/dtman/grad/data.csv',header = TRUE)
+
+
+df = dataset # Original Copy
+#Exploring the Dataset
+summary(df)
+
+install.packages("ggm")
+library(ggm)
+pcor(c("Chance.of.Admit", "GRE.Score", "TOEFL.Score","University.Rating","SOP","LOR","CGPA",'Research'), var(dataset))
+dataset.pcor = pcor(c("Chance.of.Admit", "GRE.Score", "TOEFL.Score","University.Rating","SOP","LOR","CGPA",'Research'),var(dataset))
+pcor.test(dataset.pcor,1,20)
+
+
+library(MASS)
+
+model_forward=step(lm(Chance.of.Admit ~ GRE.Score+TOEFL.Score+University.Rating+SOP+LOR+CGPA+Research, data=dataset),direction = "forward")
+summary(model_forward)
+
+model_backward=step(lm(Chance.of.Admit ~ GRE.Score+TOEFL.Score+University.Rating+SOP+LOR+CGPA+Research, data=dataset),direction = "backward")
+summary(model_backward)
+
+model_both=step(lm(Chance.of.Admit ~ GRE.Score+TOEFL.Score+University.Rating+SOP+LOR+CGPA+Research, data=dataset),direction = "both")
+summary(model_both)
+
+anova(model_1, model_2,model_3)
+
+summary(model_2)
+summary(model_1)
+
+install.packages('car')
+library(car)
+vif(model_forward)
+vif(model_backward)
+vif(model_both)
+
+plot(model_both)
+
+qqPlot(model_both,labels=row.names(states),id.method="identify",simulate=TRUE,main="Q-Q_ plot")
+
+crPlots(model_both)
+ncvTest(model_both)
+spreadLevelPlot(model_both)
+
+install.packages('gvlma')
+library(gvlma)
+gvmodel<-gvlma(model_forward)
+summary(gvmodel)
 
 ================================================================================================================================
 
