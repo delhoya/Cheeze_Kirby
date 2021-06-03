@@ -179,24 +179,34 @@ PBL 보고서 - 소감문 작성
 # 트리
 https://kingpodo.tistory.com/category/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0?page=1
 
+# 크루스칼 알고리즘
+
+# 프림알고리즘 
+https://antananarivo.tistory.com/21
+https://woongsios.tistory.com/89
+
+# 다익스트라 알고리즘
+
+
+# AVL 트리 
+https://www.cs.usfca.edu/~galles/visualization/AVLtree.html
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=dhdh6190&logNo=221062784111
+
 #정렬
 https://gmlwjd9405.github.io/tags#algorithm
 
 #제자리 힙정렬 (오름차순)
 https://ehclub.co.kr/1552
 
-# AVL 트리 
-https://www.cs.usfca.edu/~galles/visualization/AVLtree.html
-https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=dhdh6190&logNo=221062784111
+
+# 병합정렬 반복구현 
+https://www.daleseo.com/sort-merge/
+
+
 
 # 해시테이블
 https://hsp1116.tistory.com/35
 
-# 프림알고리즘 
-https://antananarivo.tistory.com/21
-
-# 병합정렬 반복구현 
-https://www.daleseo.com/sort-merge/
 
 
 import sys
