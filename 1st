@@ -1,4 +1,21 @@
 
+
+행렬 전사 확인 
+
+
+
+A = matrix(4, 3, [0, 3, -1, 5, -1, -2, -1, 1, 0, 4, 2, -1])
+print(A)
+print ("rank(A) =", A.rank())            # rank 계산 
+print ("nullity(A) =", A.right_nullity())    # nullity 계산
+
+U = QQ^3
+V = QQ^4
+TA = linear_transformation(U, V, A, side='right')    
+
+print (TA.image())                # 치역 확인
+print ("TA is surjective ?", TA.is_surjective())# 전사인지 확인
+
 ====================================================================
 
 2.
