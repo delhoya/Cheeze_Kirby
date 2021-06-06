@@ -117,7 +117,23 @@ for i in range(1, n + 1):
 #[x == -sqrt(5), y == (-5/4), z == -3/2*sqrt(5)]
 
 
-#  0 0 0
+===========================================================
+
+
+
+H=f.hessian() #주어진 함수의 헤시안 행렬 구하기
+table = [["Critical Point", "Hessian matrix"]] #테이블 설정
+for sol in cpoints:
+    if ((sol[x] in RR) and (sol[y] in RR) and (sol[z] in RR)):
+        a=sol[x]
+        b=sol[y]
+        c=sol[z]
+        table.append([(sol[x],sol[y],sol[z]), H(x=a,y=b,z=c)])
+show(H) #헤시안 행렬 보이기
+
+=========================================================
+
+# 극대 극소 판정하기 
 
 H = matrix([[2, 0, -3], [0, -4, 0], [-3, 0, 2]])  # 행렬 입력
 m, n = H.nrows(), H.ncols()  # 행렬의 크기
