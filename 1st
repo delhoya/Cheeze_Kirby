@@ -99,6 +99,20 @@ solve([gradf[0] == 0, gradf[1] == 0 , gradf[2]==0], x, y,z)
 
 ====================================================================
 
+
+H=f.hessian() #주어진 함수의 헤시안 행렬 구하기
+table = [["Critical Point", "Hessian matrix"]] #테이블 설정
+for sol in cpoints:
+    if ((sol[x] in RR) and (sol[y] in RR) and (sol[z] in RR)):
+        a=sol[x]
+        b=sol[y]
+        c=sol[z]
+        table.append([(sol[x],sol[y],sol[z]), H(x=a,y=b,z=c)])
+show(H) #헤시안 행렬 보이기
+
+
+===========================================================
+
 8. 7번에서 구한 각각의 임계점에서 f가 극댓값을 갖는지, 극솟값을 갖는지, 안장점인지 판단하여라.
 ([힌트] 선행 주 소행렬식(leading principal minor)의 부호를 이용하라)
 
@@ -117,19 +131,9 @@ for i in range(1, n + 1):
 #[x == -sqrt(5), y == (-5/4), z == -3/2*sqrt(5)]
 
 
-===========================================================
 
 
 
-H=f.hessian() #주어진 함수의 헤시안 행렬 구하기
-table = [["Critical Point", "Hessian matrix"]] #테이블 설정
-for sol in cpoints:
-    if ((sol[x] in RR) and (sol[y] in RR) and (sol[z] in RR)):
-        a=sol[x]
-        b=sol[y]
-        c=sol[z]
-        table.append([(sol[x],sol[y],sol[z]), H(x=a,y=b,z=c)])
-show(H) #헤시안 행렬 보이기
 
 =========================================================
 
