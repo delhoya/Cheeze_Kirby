@@ -85,11 +85,31 @@ solve([gradf[0] == 0, gradf[1] == 0 , gradf[2]==0], x, y,z)
 8. 7번에서 구한 각각의 임계점에서 f가 극댓값을 갖는지, 극솟값을 갖는지, 안장점인지 판단하여라.
 ([힌트] 선행 주 소행렬식(leading principal minor)의 부호를 이용하라)
 
+#[[x == sqrt(5), y == (-5/4), z == 3/2*sqrt(5)]
+
+H = matrix([[9/2, -2*sqrt(5), -3], [-2*sqrt(5), -4, 0], [-3, 0, 2]])  # 행렬 입력
+m, n = H.nrows(), H.ncols()  # 행렬의 크기
+if m != n:
+    raise ValueError("The matrix must be square.")  # 정사각행렬이 아니면 에러
+    
+for i in range(1, n + 1):
+    H_principal_minor = H.submatrix(0, 0, i, i).det()  # 선행 주 소행렬식
+    print("The ", i, "th principal minor is ", H_principal_minor)
+    
+    
+#[x == -sqrt(5), y == (-5/4), z == -3/2*sqrt(5)]
 
 
+#  0 0 0
 
-
-
+H = matrix([[2, 0, -3], [0, -4, 0], [-3, 0, 2]])  # 행렬 입력
+m, n = H.nrows(), H.ncols()  # 행렬의 크기
+if m != n:
+    raise ValueError("The matrix must be square.")  # 정사각행렬이 아니면 에러
+    
+for i in range(1, n + 1):
+    H_principal_minor = H.submatrix(0, 0, i, i).det()  # 선행 주 소행렬식
+    print("The ", i, "th principal minor is ", H_principal_minor)
 ====================================================================
 
 # 트리
