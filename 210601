@@ -1,307 +1,105 @@
 
-
-===========================================
-
-
-1. 알고리즘
-프로그래머스
-리트코드
-
-백준 추천
-https://covenant.tistory.com/224
-https://www.tutorialspoint.com/valid-mountain-array-in-python
-
-삼성소프트웨어 아데미
-https://swexpertacademy.com/main/main.do
-https://zetawiki.com/wiki/SW_Expert_%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8
-
-2. 기계학습
-패스트캠퍼스 강의 
-
-3. 토익시험
-
-
-
-1. 알고리즘 책 
-https://freedeveloper.tistory.com/271?category=888096
-
-
-===========================================
-
-https://colab.research.google.com/github/NoCodeProgram/CodingTest/blob/main
-
-1
-코딩테스트 BackTracking
-모든 재생목록 보기
-
-214
-지금 재생 중
-코딩테스트 Dynamic Programming
-모든 재생목록 보기
-
-83
-지금 재생 중
-코딩테스트 HashMap
-모든 재생목록 보기
-
-64
-지금 재생 중
-코딩테스트 Stack
-모든 재생목록 보기
-
-55
-지금 재생 중
-코딩테스트 String
-모든 재생목록 보기
-
-156
-지금 재생 중
-코딩테스트 Arrays
-모든 재생목록 보기
-
-7
-코딩테스트 Greedy
-모든 재생목록 보기
-
-58
-지금 재생 중
-코딩테스트 Heap
-모든 재생목록 보기
-
-89
-지금 재생 중
-코딩테스트 Graph
-모든 재생목록 보기
-
-1210
-지금 재생 중
-코딩테스트 Tree
-모든 재생목록 보기
-
-511
-지금 재생 중
-코딩테스트 Queue
-모든 재생목록 보기
-
-1312
-지금 재생 중
-코딩테스트 LinkedList
-모든 재생목록 보기
-
-..
-
-
-
-===========================================
-
 import os
-
-inDirectory = 'D:/Data/Simulation/dual-detector/Images/'
-outDirectory = 'D:/Data/Simulation/dual-detector/outputs/'
-# read all files in inDirectory and make filename list 
-mylist = os.listdir(inDirectory)
-
-print(len(mylist))
-
-for i in range(len(mylist)):
-    print(i, mylist[i])
-    input_name = mylist[i]
-
-    output_name = input_name[0:len(input_name) - 3] + 'image.png'
-    print('input file: ', input_name)
-    print('output file: ', output_name)
-
-    filename = inDirectory + input_name
-    output_filename = outDirectory + output_name
-
-
-===========================================
-
-################################################
-#  Code by Mikiko on Oct. 28th 2020
-#  for reading binary images
-#  with 32-float
-#  output: average image
-#  in myDirectory
-################################################
-import os
-import struct
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+import pandas as pd
 
-### constant ###
-Npixel_x = 200
-Npixel_y = 200
-Scintillator = ['CsI','GOS']    #'CsI' or 'GOS'
-StartPixels = [40, 90, 140]
-for kk in range(3):
-    print(StartPixels[kk])
+# 이미지 경로 설정
+Images_path_name = 'C:/Users/user/Desktop/CsI_GOS_BoneBodyIodine'
+Images_file_name_list = os.listdir(Images_path_name)
+Images_nums = len(Images_file_name_list)
 
-StepPixels = 20
+# CsI , Gos 리스트 구분
+Scintillator_list = ['CsI','GOS']    #'CsI' or 'GOS' 입력
+Images_Scintillator_list_0 = []
+Images_Scintillator_list_1 = []
 
-print(Scintillator[0], Scintillator[1])
+for i in range(Images_nums):
 
-### variable ###
-ii=0
-Nfile_CSI = 0
-Nfile_GOS = 0
+    if Scintillator_list[0] in Images_file_name_list[i]:
+        Images_Scintillator_list_0.append(Images_file_name_list[i])
 
-Boundary_x1=[]
-Boundary_x2=[]
-Boundary_y1=[]
-Boundary_y2=[]
+    elif Scintillator_list[1] in Images_file_name_list[i] :
+        Images_Scintillator_list_1.append(Images_file_name_list[i])
 
-output_CsI = []
-output_GOS = []
+Images_Scintillator_list_0_num = len(Images_Scintillator_list_0)
+Images_Scintillator_list_1_num = len(Images_Scintillator_list_1)
 
+# 이미지 전처리 용도 임시 np.array 생성
+X_pixel = 200
+Y_pixel = 200
+image_temp_np_array = np.zeros([X_pixel*Y_pixel])
 
-# setting path to input file
-inDirectory = 'D:/Data/Simulation/dual-detector/chest_CsI_GOS/'
-outDirectory = 'D:/Data/Simulation/dual-detector/outputs_chest_CsI_GOS/'
-mylist = os.listdir(inDirectory)
-print(len(mylist))
+# 이미지 반복 추출 진행 (1)
+for i in range(Images_Scintillator_list_0_num):
+    with open(Images_path_name + '/' + Images_Scintillator_list_0[i], "rb") as file:
+        float_data = np.fromfile(file,dtype='f4')
+        image_temp_np_array += float_data
+    # 평균 값 구하기
+image_temp_np_array /= Images_Scintillator_list_0_num
+    # reshpae() - 40000 to 200 x 200 pixcel
+image_float_data_reshape_0 = image_temp_np_array.reshape(X_pixel, Y_pixel)
 
-output_name0 =  mylist[0]
-output_image1 = outDirectory + output_name0[0:len(output_name0)-16] + 'Projection.png'
-output_image2 = outDirectory + output_name0[0:len(output_name0)-16] + 'Inverted.png'
-output_csvfile = outDirectory + output_name0[0:len(output_name0)-16] + 'Output_CsI_GOS.csv'
+image_temp_np_array1 = np.zeros([X_pixel * Y_pixel])
+# 이미지 반복 추출 진행 (2)
+for i in range(Images_Scintillator_list_1_num):
+    with open(Images_path_name + '/' + Images_Scintillator_list_1[i], "rb") as file2:
+        float_data1 = np.fromfile(file2, dtype='f4')
+        image_temp_np_array1 += float_data1
+    # 평균 값 구하기
+image_temp_np_array1 /= Images_Scintillator_list_1_num
+    # reshpae() - 40000 to 200 x 200 pixcel
+image_float_data_reshape_1 = image_temp_np_array1.reshape(X_pixel, Y_pixel)
 
-
-for j in range(2):
-    title_image_1 = Scintillator[j] + '-layer Projection '
-    title_image_2 = Scintillator[j] + '-layer Norm-Proj. '
-    title_image_3 = Scintillator[j] + '-layer Inverted '
-    title_image_4 = Scintillator[j] + '-layer Norm-Invert. '
-
-    textFile_1 = Scintillator[j] + '_projection.txt'
-    textFile_2 = Scintillator[j] + '_inverted.txt'
-    output_text_1 = outDirectory + textFile_1
-    output_text_2 = outDirectory + textFile_2
-
-    for i in range(len(mylist)):
-        #print(i, mylist[i])
-        input_name = mylist[i]
-        split_name = input_name.split('_')
-
-        if(split_name[1] == Scintillator[j]):
-
-            filename = inDirectory + input_name
-            output_name = input_name[0:len(input_name) - 3] + 'png'
-            output_filename = outDirectory + output_name
-
-            ii = ii+1
-
-            with open(filename, 'rb') as file:
-                fileContent = file.read()
-                Nbins = len(fileContent) // 4
-                print(Nbins)
-                data = struct.unpack('f' * Nbins, fileContent)
-                print('input file: ', input_name)
-                print('output file: ', output_name)
-
-                if ii == 1:
-                    output_image_sumAll = outDirectory + input_name[0:len(input_name) - 12] + 'sum.png'
-                    avrg_data = np.array(data)
-                else:
-                    avrg_data = avrg_data + np.array(data)
-
-                print(min(avrg_data), max(avrg_data))
-                print(len(avrg_data))
-
-    out_data = avrg_data/ii
-    avrg_data = avrg_data/ii
-    print(min(avrg_data), max(avrg_data))
-    print(len(avrg_data))
-    Npixel_air = 5*200
-    air = sum(avrg_data[(len(avrg_data) - Npixel_air):])/Npixel_air
-    norm_avrg_data = avrg_data/air
-    invert_avrg_data = - avrg_data + air
-    out_invert = invert_avrg_data
-
-    invert_avrg_data = invert_avrg_data.clip(min=1)
-
-    norm_invert_avrg = invert_avrg_data/max(invert_avrg_data)
-    print('len:', len(invert_avrg_data), 'max:', max(invert_avrg_data))
-
-    avrg_data = np.reshape(avrg_data, (Npixel_y, Npixel_x))
-    norm_avrg_data = np.reshape(norm_avrg_data, (Npixel_y, Npixel_x))
-    invert_avrg_data = np.reshape(invert_avrg_data, (Npixel_y, Npixel_x))
-    norm_invert_avrg = np.reshape(norm_invert_avrg, (Npixel_y, Npixel_x))
-
-    #print(invert_avrg_data[40:60,10:30])
-    #print('sum', sum(sum(invert_avrg_data[40:60,10:30]))/400)
-
-    print('air:',air)
-    print('scintillator: ', Scintillator[j],'  # of files: ',ii)
-
-    #### write txt file (sum_data) ####
-    with open(output_text_1, 'w') as f:
-        for item in out_data:
-            print(item)
-            f.write("%f\n" % item)
-
-    with open(output_text_2, 'w') as f:
-        for item in out_invert:
-            print(item)
-            f.write("%f\n" % item)
-
-
-    print(output_image_sumAll)
-
-    plt.subplots(figsize=(18, 4))
-
-    plt.subplot(1, 4, 1)
-    plt.title(title_image_1)
-    plt.imshow(avrg_data)
-    plt.colorbar()
-    plt.subplot(1, 4, 2)
-    plt.title(title_image_2)
-    plt.imshow(norm_avrg_data)
-    plt.colorbar()
-    plt.subplot(1, 4, 3)
-    plt.title(title_image_3)
-    plt.imshow(invert_avrg_data)
-    plt.colorbar()
-    plt.savefig(output_image_sumAll)
-    plt.subplot(1, 4, 4)
-    plt.title(title_image_4)
-    plt.imshow(norm_invert_avrg)
-    plt.colorbar()
-    plt.savefig(output_image_sumAll)
-    plt.show()
-
-    # INITILIZATION
-    del avrg_data
-    ii = 0
-
-#ratio_invert = invert_GOS/invert_CsI
-#ratio_invert = ratio_invert.clip(max=1)
-#ratio_diff_invert = (invert_CsI - invert_GOS)/invert_CsI
-#ratio_diff_invert = ratio_diff_invert.clip(min=0)
-#subtract_norm_invert = norm_invert_CSI - norm_invert_GOS
-
-plt.subplots(figsize=(18, 9))
-plt.subplot(1, 2, 1)
-plt.title('Proj_CsI')
-plt.imshow(proj_CSI)
+# 그래프 생성 imshow , colorbar , show
+plt.subplots(figsize=(10, 4))
+plt.subplot(1,2,1)
+plt.title(Scintillator_list[0]+"_AVG")
+plt.imshow(image_float_data_reshape_0)
 plt.colorbar()
-plt.subplot(1, 2, 2)
-plt.title('Proj_GOS')
-plt.imshow(proj_GOS)
+
+plt.subplot(1,2,2)
+plt.title(Scintillator_list[1]+"_AVG")
+plt.imshow(image_float_data_reshape_1)
 plt.colorbar()
-plt.savefig(output_image1)
+
+
+
+# 1. 그림 추출할 구간 정하기  전체 data 40000 / 20x20(400) * 27 = 10800 개
+# 2차원 배열 슬라이싱 함수 [:] (for 격차 추출)
+image_float_data_reshape1_window_1 = image_float_data_reshape_1[15:25, 45:55]
+#print(image_float_data_reshape1_window_1)
+
+mean_data_window1 = np.mean(image_float_data_reshape1_window_1)
+print(mean_data_window1)
+
+# 그래프 출력
 plt.show()
 
-plt.subplots(figsize=(18, 9))
-plt.subplot(1, 2, 1)
-plt.title('invert_CsI')
-plt.imshow(invert_CsI)
-plt.colorbar()
-plt.subplot(1, 2, 2)
-plt.title('invert_GOS')
-plt.imshow(invert_GOS)
-plt.colorbar()
-plt.savefig(output_image2)
-plt.show()
+
+
+# 범위 지정을 위한 x 리스트 생성
+x_range_list = [x for x in range (10,30,1)]
+y_range_list = [y for y in range (40,60,1)]
+#print(x_range_list)
+#print(y_range_list)
+
+#plt.scatter(10,40)
+#plt.scatter(30,40)
+#plt.scatter(10,60)
+#plt.scatter(30,60)
+
+# 범위 지정 사각형 그리기 matplotlib.patches.Rectangle( (2사분면모서리좌표), 가로길이,세로길이)
+Rectangle_shape = patches.Rectangle((14,44),11,11,color='b')
+plt.gca().add_patch(Rectangle_shape)
+
+# 이미지 격자 평균값 저장 np.array 생성
+X_window = 3
+Y_window = 9
+window_avg_list = np.zeros([X_window * Y_window])
+window_avg_list_reshape = window_avg_list.reshape(Y_window, X_window)
+
+#print(window_avg_list_reshape)
+print(window_avg_list_reshape.shape)
 
