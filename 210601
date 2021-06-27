@@ -103,3 +103,9 @@ window_avg_list_reshape = window_avg_list.reshape(Y_window, X_window)
 #print(window_avg_list_reshape)
 print(window_avg_list_reshape.shape)
 
+
+
+
+# https://engineer-mole.tistory.com/9 
+# AVG 풀링 
+
