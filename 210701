@@ -6,13 +6,20 @@ https://colab.research.google.com/github/NoCodeProgram/CodingTest/blob/main
 https://www.edwith.org/medical-20200327/joinLectures/30437
 
 
+
+
 # 파이선 모듈
 
-# 이미지 처리 
+# 이미지 처리 (Scipy)
 https://scipy-lectures.org/advanced/image_processing/index.html#id39
 https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.grey_erosion.html
-# 함수 피팅 
+# 함수 피팅  (Scipy)
 https://scipy-lectures.org/advanced/mathematical_optimization/index.html#id50
+
+# OpenC.V
+https://opencv-python.readthedocs.io/en/latest/doc/28.mlKnn/mlKnn.html
+https://webnautes.tistory.com/803?category=791376
+https://wjddyd66.github.io/opencv/OpenCV(3)/
 
 
 # x ray 영상 (듀얼에너지)
