@@ -30,9 +30,23 @@ https://dsbook.tistory.com/category/%EC%B0%A8%EC%A4%80%EC%98%81/Python%20OpenCV
 https://deep-learning-study.tistory.com/8?category=942011
 https://cding.tistory.com/category
 
+1. 신경망 학습
+https://deep-learning-study.tistory.com/15?category=942011
+2. 오차 역전파 (not SGD)
+https://deep-learning-study.tistory.com/19?category=942011
+3. 매개변수 갱신 (ADAM)
+https://deep-learning-study.tistory.com/159?category=942011
+4. 배치정규화
+https://deep-learning-study.tistory.com/166?category=942011
+5. 검증데이터
+https://deep-learning-study.tistory.com/170?category=942011
+6. CNN
+https://deep-learning-study.tistory.com/188?category=942011
+
+
+
 # 캐글 예시 (CNN) 
 https://www.kaggle.com/sanwal092/intro-to-cnn-using-keras-to-predict-pneumonia
-
 
 
 # 논문 참조
