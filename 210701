@@ -47,6 +47,7 @@ https://www.kaggle.com/sanwal092/intro-to-cnn-using-keras-to-predict-pneumonia
 https://aihub.or.kr/
 https://kbig.kr/portal/kbig
 
+
 # 논문 참조
 https://www.mdpi.com/2227-7390/8/4/545/htm
 https://www.researchgate.net/publication/262269960_A_Comparison_of_X-Ray_Image_Segmentation_Techniques
@@ -54,20 +55,38 @@ https://www.birpublications.org/doi/full/10.1259/bjro.20180008
 https://pubs.rsna.org/doi/10.1148/rg.2016150220
 https://scholarworks.rit.edu/cgi/viewcontent.cgi?article=11730&context=theses
 
+
 # Edge Detection  캐니엣지 
 https://ichi.pro/ko/pytorchlo-cheoeumbuteo-canny-edge-gamji-guhyeon-177901029133293
 https://jackyoon5737.tistory.com/72?category=369720
 https://velog.io/@hewas1230/CannyEdge
 
+
 # Sharpening 샤프닝
 https://homes.di.unimi.it/ferrari/ElabImm2011_12/EI2011_12_08_spatial_filtering2_double.pdf
 https://slidesplayer.org/slide/14836130/
 
+
 # blood vessel 검출
 https://www.programmersought.com/article/3892525339/
 
+
 # active contour 외각선 검출 
 https://adioshun.gitbooks.io/gitbook_from_github/content/Image_Process_ch04.html
+
+
+# fitting 최적화 함수 
+RANSAC의 이해와 영상처리 활용
+https://darkpgmr.tistory.com/61
+
+
+===================================================
+
+생각해볼것들 
+
+# Open C.V + PyQT 5
+https://blog.xcoda.net/104
+
 
 # super resolution (SR) in medical image 
 https://adioshun.gitbooks.io/gitbook_from_github/content/Image_Process_ch08.html
