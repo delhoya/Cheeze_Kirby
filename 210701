@@ -80,6 +80,12 @@ https://076923.github.io/posts/Python-opencv-2/
 https://adioshun.gitbooks.io/gitbook_from_github/content/Image_Process_ch08.html
 https://hoya012.github.io/blog/SIngle-Image-Super-Resolution-Overview/
 
+
+# 영상 기하학 
+카메라 캘리브레이션, 스테레오 매칭, structure from motion, 모션 추정, local feature matching, 매치무브(matchmove)
+https://darkpgmr.tistory.com/77?category=460965
+
+
 # X-ray reconstruction Image 리컨스트럭션 이미지 
 https://www.programmersought.com/article/90934682534/
 
