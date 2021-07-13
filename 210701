@@ -45,19 +45,17 @@ https://www.kaggle.com/sanwal092/intro-to-cnn-using-keras-to-predict-pneumonia
 https://aihub.or.kr/
 https://kbig.kr/portal/kbig
 
-# 논문 참조
-https://www.mdpi.com/2227-7390/8/4/545/htm
-https://www.researchgate.net/publication/262269960_A_Comparison_of_X-Ray_Image_Segmentation_Techniques
-https://www.birpublications.org/doi/full/10.1259/bjro.20180008
-https://pubs.rsna.org/doi/10.1148/rg.2016150220
-https://scholarworks.rit.edu/cgi/viewcontent.cgi?article=11730&context=theses
+
 
 # Edge Detection  캐니엣지 
 https://ichi.pro/ko/pytorchlo-cheoeumbuteo-canny-edge-gamji-guhyeon-177901029133293
 https://jackyoon5737.tistory.com/72?category=369720
 https://velog.io/@hewas1230/CannyEdge
 
-# Sharpening 샤프닝
+# Edge Detection 푸리에변환 
+https://blog.naver.com/samsjang/220565430664
+
+# unsharp mask  샤프닝 Sharpening  
 https://homes.di.unimi.it/ferrari/ElabImm2011_12/EI2011_12_08_spatial_filtering2_double.pdf
 https://slidesplayer.org/slide/14836130/
 
@@ -84,5 +82,15 @@ https://hoya012.github.io/blog/SIngle-Image-Super-Resolution-Overview/
 
 # X-ray reconstruction Image 리컨스트럭션 이미지 
 https://www.programmersought.com/article/90934682534/
+
+
+# 논문 참조
+https://www.mdpi.com/2227-7390/8/4/545/htm
+https://www.researchgate.net/publication/262269960_A_Comparison_of_X-Ray_Image_Segmentation_Techniques
+https://www.birpublications.org/doi/full/10.1259/bjro.20180008
+https://pubs.rsna.org/doi/10.1148/rg.2016150220
+https://scholarworks.rit.edu/cgi/viewcontent.cgi?article=11730&context=theses
+
+
 
 
