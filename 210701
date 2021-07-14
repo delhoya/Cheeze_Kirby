@@ -78,6 +78,7 @@ https://adioshun.gitbooks.io/gitbook_from_github/content/Image_Process_ch04.html
 https://jvvp.tistory.com/1084
 
 
+
 # graph cut + 3D reconstruction
 Image segmentation by graph cut for radiation images of small animal blood vessels
   Interactive Graph Cuts (IGC), Binary Partition Trees (BPT), Seeded Region Growing (SRG), and Simple Interactive Extraction.
@@ -86,9 +87,9 @@ Image segmentation by graph cut for radiation images of small animal blood vesse
 RANSAC의 이해와 영상처리 활용
 https://darkpgmr.tistory.com/61
 
-
 # OCR 자동차 번호판 검출 알고리즘
 https://emaru.tistory.com/15
+
 
 ===================================================
 
