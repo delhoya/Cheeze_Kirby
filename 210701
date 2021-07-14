@@ -57,28 +57,23 @@ https://velog.io/@hewas1230/CannyEdge
 
 # Edge Detection 푸리에변환 
 https://blog.naver.com/samsjang/220565430664
+https://leechamin.tistory.com/266?category=857057
 
 # unsharp mask  샤프닝 Sharpening  
 https://homes.di.unimi.it/ferrari/ElabImm2011_12/EI2011_12_08_spatial_filtering2_double.pdf
 https://slidesplayer.org/slide/14836130/
 
-# blood vessel 검출
-https://www.programmersought.com/article/3892525339/
-
 # graph cut 알고리즘 - 외각선 검출 
 Graph cut based automatic lung boundary detection in chest radiographs
   https://www.researchgate.net/publication/236008367_Graph_cut_based_automatic_lung_boundary_detection_in_chest_radiographs
-
 
 # active contour 외각선 검출 
 https://adioshun.gitbooks.io/gitbook_from_github/content/Image_Process_ch04.html
 https://jvvp.tistory.com/1084
 
-
 # graph cut + 3D reconstruction
 Image segmentation by graph cut for radiation images of small animal blood vessels
   Interactive Graph Cuts (IGC), Binary Partition Trees (BPT), Seeded Region Growing (SRG), and Simple Interactive Extraction.
-
 
 # fitting 최적화 함수 
 RANSAC의 이해와 영상처리 활용
@@ -103,6 +98,10 @@ https://darkpgmr.tistory.com/77?category=460965
 
 # X-ray reconstruction Image 리컨스트럭션 이미지 
 https://www.programmersought.com/article/90934682534/
+
+
+# Three-dimensional reconstruction of blood vessels
+https://www.programmersought.com/article/3892525339/
 
 
 # 논문 참조
