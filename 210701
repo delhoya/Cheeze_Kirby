@@ -65,9 +65,18 @@ https://slidesplayer.org/slide/14836130/
 # blood vessel 검출
 https://www.programmersought.com/article/3892525339/
 
+# graph cut 알고리즘 - 외각선 검출 
+https://www.researchgate.net/publication/236008367_Graph_cut_based_automatic_lung_boundary_detection_in_chest_radiographs
+
+
 # active contour 외각선 검출 
 https://adioshun.gitbooks.io/gitbook_from_github/content/Image_Process_ch04.html
 https://jvvp.tistory.com/1084
+
+
+# graph cut + 3D reconstruction
+Image segmentation by graph cut for radiation images of small animal blood vessels
+  Interactive Graph Cuts (IGC), Binary Partition Trees (BPT), Seeded Region Growing (SRG), and Simple Interactive Extraction.
 
 
 # fitting 최적화 함수 
