@@ -35,8 +35,7 @@ https://deep-learning-study.tistory.com/108
 # 딥러닝 북마크
 https://bbongcol.github.io/deep-learning-bookmarks/
 
-
-# 딥러닝 이론 
+# 딥러닝 이론
 https://cding.tistory.com/84?category=786942
 
 
@@ -83,9 +82,6 @@ https://leechamin.tistory.com/266?category=857057
 https://homes.di.unimi.it/ferrari/ElabImm2011_12/EI2011_12_08_spatial_filtering2_double.pdf
 https://slidesplayer.org/slide/14836130/
 
-# graph cut 알고리즘 - 외각선 검출 
-Graph cut based automatic lung boundary detection in chest radiographs
-  https://www.researchgate.net/publication/236008367_Graph_cut_based_automatic_lung_boundary_detection_in_chest_radiographs
 
 # snake active contour 원리
 https://jade314.tistory.com/entry/SnakeActive-Contour-ModelsACM
@@ -97,6 +93,11 @@ https://m.blog.naver.com/samsjang/220516697251
 
 # Active contour 계층구조
 https://leechamin.tistory.com/260?category=857057
+
+
+# graph cut 알고리즘 - 외각선 검출 
+Graph cut based automatic lung boundary detection in chest radiographs
+  https://www.researchgate.net/publication/236008367_Graph_cut_based_automatic_lung_boundary_detection_in_chest_radiographs
 
 
 # Graph Cut 그래프 컷
