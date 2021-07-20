@@ -49,6 +49,8 @@ https://ysbsb.github.io/machine_learning/2021/02/07/Perceptron.html
 https://deep-learning-study.tistory.com/12?category=942011
 3. 신경망 학습 알고리즘 구현
 https://deep-learning-study.tistory.com/15?category=942011
+
+오차역전파
 4. 오차 역전파 (not SGD)
 https://deep-learning-study.tistory.com/19?category=942011
 5. 매개변수 갱신 (ADAM)
