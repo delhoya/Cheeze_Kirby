@@ -39,22 +39,25 @@ https://bbongcol.github.io/deep-learning-bookmarks/
 https://cding.tistory.com/84?category=786942
 
 
+신경망 구현 
 0.퍼셉트론
 https://deep-learning-study.tistory.com/8?category=942011
 https://ysbsb.github.io/machine_learning/2021/02/07/Perceptron.html
-1. 신경망 학습
-https://deep-learning-study.tistory.com/15?category=942011
+
+신경망 학습
 2. 손실함수 (목표치&최적화)
 https://deep-learning-study.tistory.com/12?category=942011
-2. 오차 역전파 (not SGD)
+3. 신경망 학습 알고리즘 구현
+https://deep-learning-study.tistory.com/15?category=942011
+4. 오차 역전파 (not SGD)
 https://deep-learning-study.tistory.com/19?category=942011
-3. 매개변수 갱신 (ADAM)
+5. 매개변수 갱신 (ADAM)
 https://deep-learning-study.tistory.com/159?category=942011
-4. 배치정규화
+6. 배치정규화
 https://deep-learning-study.tistory.com/166?category=942011
-5. 검증데이터
+7. 검증데이터
 https://deep-learning-study.tistory.com/170?category=942011
-6. CNN
+8. CNN
 https://deep-learning-study.tistory.com/188?category=942011
 
 # 캐글 예시 (CNN) 
