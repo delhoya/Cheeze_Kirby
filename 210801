@@ -1,4 +1,5 @@
 
+머신러닝
 
 MLE ? MAP ? 
 강의목록
@@ -10,6 +11,8 @@ https://www.edwith.org/medical-20200327/joinLectures/30437
 
 =============================================================
 
+깃허브
+
 깃 버전관리
 https://wikidocs.net/75554
 깃 bash 사용
@@ -19,10 +22,7 @@ https://opentutorials.org/course/3837
 
 =============================================================
 
-생활코딩 AWS
-https://opentutorials.org/course/2717
-
-=============================================================
+리눅스
 
 생활코딩 리눅스
 https://opentutorials.org/course/2598
@@ -41,6 +41,15 @@ $ sudo /opt/Citrix/ICAClient/util/ctx_reflash
 
 
 =============================================================
+
+클라우드
+
+생활코딩 AWS
+https://opentutorials.org/course/2717
+
+=============================================================
+
+웹프레임워크
 
 점프 투 장고
 https://wikidocs.net/book/4223
