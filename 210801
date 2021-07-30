@@ -40,6 +40,10 @@ $ sudo cp ~/Downloads/AAA.pem
 $ sudo /opt/Citrix/ICAClient/util/ctx_reflash
 
 
+리눅스 alias
+bashrc
+https://dohk.tistory.com/191
+
 리눅스 깃허브
   https://woongchoi84.github.io/2020/01/15/post-productive-howtousegithub.html
   https://gist.github.com/godori/355391c91d2f6725aee8f273f095e87c
