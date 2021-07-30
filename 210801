@@ -106,27 +106,31 @@ https://wikidocs.net/book/4223
 
 개발능력 
 
-1. AutoCad / Zuken 회로설계 (Hardware) 
-PCB (FPCB) 설계 및 SMT  
+1. 회로설계 (Hardware) 
+PCB (FPCB) 설계 및 SMT 
+AutoCad / Zuken 활용 
 
-2.  IC Chip / Build & Test (C기반) (Software) 
+2. 펌웨어 / Build & Test (Software) 
 
-Ti - MSP430FR2633 
-Ti -FDC2214
-Renesase - RX230
+Touch MCU 
+Ti - MSP430FR2633 / FDC2214 (LG 휴대폰 Touch IC)
+Renesase - RX230 (LG 로봇청소기)
+ 
+Audio MCU(DSP)
+XMOS - Vocal fusion (Audio Beamforming / Noise Canceling)
  
 3. Machine learning
 Digital Image Processing 능력 
-(X-ray Dual energy - Image Segmentation) 
-Unet / Encoder_decoder  을 활용한 chest X-ray image 분리 
+Unet / Encoder_decoder  을 활용한 chest X-ray image 분리 (X-ray Dual energy - Image Segmentation) 
 (프로젝트 경험 및 논문) 
 
 4. Cloud / Big data
-AWS 활용 경험
+
 AWS Certification 자격증 
+AWS 활용 
 
 Big data Pipeline 구축 툴 사용 경험
-Hadoop / Spark 
+Hadoop / Spark 활용
 
 5. 기타 협업 툴 사용 
 Linux 환경 / Git / AWS 활용 
