@@ -29,6 +29,17 @@ https://opentutorials.org/course/2598
 리눅스마스터 1급
 https://bangu4.tistory.com/category/%EC%9D%BC/Server?page=1
 
+
+Ubuntu 테스트 환경이 없어 Google를 통해 확인해 본 내용으로 도움이 될까해서 전달 드리며
+본 게시판 2/28일 이명구 책임님 사례를 참조 문의하시면 도움이 될 것 같습니다.
+1. Citrix 홈페이지에서 Linux용 최신 Receiver를 설치
+2. 인증서(AAA.pem)을 /opt/Citrix/ICAClient/Keystore/cacerts 경로에 복사
+$ cd opt/Citrix/ICAClient/Keystore/cacerts
+$ sudo cp ~/Downloads/AAA.pem
+3. /opt/Citrix/ICAClient/util/ctx_reflash 명령어로 인증서정보 갱신
+$ sudo /opt/Citrix/ICAClient/util/ctx_reflash
+
+
 =============================================================
 
 점프 투 장고
@@ -36,12 +47,5 @@ https://wikidocs.net/book/4223
 
 =============================================================
 
-통계학 베이즈 정리
 
-==================================
-
-WSL2 업데이트
-
-
-https://docs.microsoft.com/ko-kr/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package
 
