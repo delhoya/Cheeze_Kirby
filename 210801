@@ -87,6 +87,21 @@ https://www.44bits.io/ko/post/easy-deploy-with-docker
 도커따라하기
 https://www.44bits.io/ko/post/easy-deploy-with-docker
 
+  도커허브 
+    https://hub.docker.com/
+  
+  1. 도커 만들기
+  docker create
+  ex) centos
+  
+  2. 도커 실행하기
+  docker start
+  ex) centos (docker ps 출력가능)
+  
+  3. 컨테이너 내부 실행하기 
+  docker exec (도커이름) bash /경로/실행파일 
+  docker attach 
+
 =============================================================
 
 
