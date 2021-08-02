@@ -32,10 +32,13 @@ add
 commit  
 push
 
+
+깃 기본
+https://thewayaboutme.tistory.com/3
+
 add : 커밋할 목록에 추가
 commit : 커밋 ( 히스토리의 한단위 ) 만들기
 push: 현재까지 역사 (commits) Github 에 밀어넣기
-
 
 
 =============================================================
