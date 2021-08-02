@@ -8,15 +8,7 @@ https://wonjun.oopy.io/70a8f11f-5728-45e8-a1a5-e6303bf56767
 # 기계학습 개론 (카이스트 문일철 교수) 
 https://www.edwith.org/machinelearning1_17#
 # 의료영상처리 (DGIST 박상현 교수)
-https://www.edwith.org/medical-20200327/joinLectures/30437
-
-
-
-
-
-
-
-
+https://www.edwith.org/medical-20200327/joinLectures/3043
 
 
 
@@ -32,6 +24,19 @@ https://wikidocs.net/75554
 https://ansohxxn.github.io/git/git/
 생활코딩 git
 https://opentutorials.org/course/3837
+
+Typora
+  타이포라 깃허브 
+clone  
+add  
+commit  
+push
+
+add : 커밋할 목록에 추가
+commit : 커밋 ( 히스토리의 한단위 ) 만들기
+push: 현재까지 역사 (commits) Github 에 밀어넣기
+
+
 
 =============================================================
 
@@ -74,12 +79,6 @@ vimtutor
   Vi 사용법 익히기
   https://jhnyang.tistory.com/54
  
-Typora
-  타이포라 깃허브 
-clone  
-add  
-commit  
-push
 
 =============================================================
 
