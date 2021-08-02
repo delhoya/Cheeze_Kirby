@@ -124,6 +124,18 @@ Image segmentation by graph cut for radiation images of small animal blood vesse
 
 
 
+# 전처리 CLAHE 알고리즘
+CLAHE (Contrast Limited Adaptive Histogram Equalization)
+
+
+https://www.slideshare.net/BOAZbigdata/8-boaz-06-abcdadjuvant-of-breast-cancer-diagnosis
+
+
+# X-ray 영상을 위한 블록 기반 대비 개선 기법
+
+https://www.koreascience.or.kr/article/JAKO201531362063351.pdf
+
+
 # 이미지 푸리에 변환
 pass
 
@@ -150,12 +162,7 @@ Cascaded systems analysis of noise reduction algorithms in dual-energy imaging
 
 
 # 램버트 비어 법칙
-
-
-
-# X-ray attenuation 
-
-
+# X-ray attenuation
 
 # DEXA 원리 
 
