@@ -168,7 +168,7 @@ SELECT 과목이름, MIN(점수) AS '최소점수' , MAX(점수) AS '최대점�
   https://credb.kcredit.or.kr:3446/frt/main.do
 
 
-ㅁ딥러닝 / 수학_미분방정식_선형대수학
+ㅁMathematics of Deep Learning
 
   https://arxiv.org/pdf/1712.04741.pdf
 
