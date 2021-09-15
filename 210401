@@ -175,12 +175,6 @@ SELECT 과목이름, MIN(점수) AS '최소점수' , MAX(점수) AS '최대점�
 
 =============================================
 
-ㅁ 맥북 kpi 설정
-
-macbook pro beamforming speaker pdf
-kpi 예시 - 잔향시간 rt60 200ms 이하 기준 충족? 
-notebook audio test - Crysound 
-
 
 ㅁ 녹음기 프로그램 (Audacity) 
 https://prayingyomi.tistory.com/60
