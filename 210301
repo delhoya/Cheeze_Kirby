@@ -96,8 +96,8 @@
 
 ㅁ 선형대수
 
-4주차, 3.5절 행렬식
-
+4주차 
+3.5절 행렬식
 
 1. 치환의정의 : (me) 버블정렬..?!)
 짝치환 +1 / 홀치환 -1 
@@ -126,7 +126,9 @@ https://m.blog.naver.com/PostView.nhn?blogId=ldj1725&logNo=220251781811&proxyRef
 2. 대각선 성분을 곱한다. 
 
 
-4주차, 4.1절 일차독립과 부분공간
+4주차, 
+
+4.1절 일차독립과 부분공간
 
 일차결합 _ 
 
@@ -168,7 +170,9 @@ W는 부분공간을 만족한다.
  = S : 기저 (1. 일차독립 / 2. R 생성)
 
 
-4주차, 4.2절 기저와 차원
+4주차, 
+
+4.2절 기저와 차원
 
 1.
 기저:
@@ -245,28 +249,16 @@ w를 X에 내린 정사영 PJTwX = M(M^TM)^-1M^T X   (M^T = M의 행벡터)
 
 ㅁ자료구조 / 알고리즘
 
+1주차
 자료형
 알고리즘 속도 최악 (빅오)
 
-@2주차
-
-
-
-
-
-ㅁ자료구조 알고리즘
+2주차
   파이선 = 
   대입이 아니라 객체 가리킴 
   파이선 리스트 객체로 생성됨
 
-ㅁ 경제이야기
-  미국 국채금리 (10년)
-  https://kr.investing.com/rates-bonds/u.s.-10-year-bond-yield
-  달러인덱스
-  https://kr.investing.com/currencies/us-dollar-index
-
-
-ㅁ 명일디펜스와 수학 문제 최적화 (반복 최적화 & 알고리즘)
+ㅁ 디펜스게임과 수학 문제 최적화 (반복 최적화 & 알고리즘)
 
 
 @ 3주차
@@ -280,11 +272,14 @@ w를 X에 내린 정사영 PJTwX = M(M^TM)^-1M^T X   (M^T = M의 행벡터)
   
   확률분포
 
-ㅁ 스마트 스피커
-  빔포밍 알고리즘 Delay and sum 
-  파이선 모듈 pyroomacoustics
+
 
 ㅁ 경제이야기
+  미국 국채금리 (10년)
+  https://kr.investing.com/rates-bonds/u.s.-10-year-bond-yield
+  달러인덱스
+  https://kr.investing.com/currencies/us-dollar-index
+
 
 @ 부동산 가격 추이 & 주택대출 (주택담보대출)
 
@@ -382,3 +377,9 @@ https://dacon.io/competitions/official/17801/overview/description/
 
 ㅁ 집구하기
 부채 상환 연봉 25% 이내 
+
+
+
+ㅁ 스마트 스피커
+  빔포밍 알고리즘 Delay and sum 
+  파이선 모듈 pyroomacoustics
