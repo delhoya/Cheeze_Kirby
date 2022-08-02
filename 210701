@@ -155,13 +155,13 @@ Cascaded systems analysis of noise reduction algorithms in dual-energy imaging
 
 # 알고리즘 탐색
 # sls ssh acnr
-  부산대 자료 획득 
+  Simple Smoothing (SSH). • Anti-correlated Noise Reduction (ACNR). 
 
 # X-ray physics - Eecs Umich
   https://web.eecs.umich.edu/~fessler/course/516/l/c3-phys.pdf
 
-
 # 램버트 비어 법칙
+
 # X-ray attenuation
 
 # DEXA 원리 
@@ -172,7 +172,6 @@ Cascaded systems analysis of noise reduction algorithms in dual-energy imaging
 # Open C.V Segmentation 응용
 https://d2.naver.com/helloworld/8344782
 
-
 # Open C.V + PyQT 5
 https://blog.xcoda.net/104
 https://076923.github.io/posts/Python-opencv-2/
@@ -180,7 +179,6 @@ https://076923.github.io/posts/Python-opencv-2/
 # super resolution (SR) in medical image 
 https://adioshun.gitbooks.io/gitbook_from_github/content/Image_Process_ch08.html
 https://hoya012.github.io/blog/SIngle-Image-Super-Resolution-Overview/
-
 
 # 영상 기하학 
 카메라 캘리브레이션, 스테레오 매칭, structure from motion, 모션 추정, local feature matching, 매치무브(matchmove)
